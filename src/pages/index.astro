@@ -1,16 +1,86 @@
 ---
-
+import "../../src/styles/global.css"
+import headerLogoImg from "../assets/header-logo.webp"
+import {
+	PiEnvelope,
+	PiGithubLogo,
+	PiLinkedinLogo,
+	PiPhone,
+} from "react-icons/pi";
+import kaueWeberImg from "../assets/kaue-weber-image.webp"
 ---
 
 <html lang="en">
 	<head>
 		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<link rel="icon" type="image/ico" href="/kh-icon.ico" />
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
+		<title>Kauê Weber</title>
 	</head>
-	<body>
-		<h1>Astro</h1>
+	<body class="bg-primary-white text-primary-black dark:bg-primary-black dark:text-primary-white">
+		<main class="md:w-2xl mx-5 md:mx-auto">
+			<section id="home" class="flex flex-col md:flex-row justify-between py-12.5 gap-5">
+				<div class="flex flex-col gap-6">
+					<img src={headerLogoImg.src} class="w-25 h-12.25 in-dark:invert" alt="">
+
+					<ul class="flex dark:font-light text-sm mr-2">
+						<li>Front-end Engineer</li>
+					</ul>
+
+					<p>
+						I build front-end applications with a strong focus on architecture, performance, and maintainability.
+						Experience working on complex dashboards and ERP systems, collaborating closely with backend teams and integrations.
+					</p>
+
+					<ul class="flex dark:font-light text-sm gap-3">
+							<li class="flex items-center gap-1.5">
+								<PiGithubLogo class="font-normal text-base" />
+								<a href="https://github.com/kauehenrick" target="blank">
+									<p>Github</p>
+								</a>
+							</li>
+							<li class="flex items-center gap-1.5">
+								<PiLinkedinLogo class="font-normal text-base" />
+								<a href="https://www.linkedin.com/in/kaueweber/" target="blank">
+									<p>LinkedIn</p>
+								</a>
+							</li>
+						</ul>
+				</div>
+
+				<img
+						src={kaueWeberImg.src}
+						class="md:w-62 rounded-b md:rounded-r"
+						alt=""
+					/>
+			</section>
+
+			<section class="pb-20" id="skills">
+				<p class="text-2-5xl mb-6">What I work with</p>
+
+				<ul class="flex flex-col gap-3 text-lg">
+					<li>
+						<p class="mb-2.5">Front-end architecture (React, Next.js)</p>
+						<hr />
+					</li>
+
+					<li>
+						<p class="mb-2.5">Front-end architecture (React, Next.js)</p>
+						<hr />
+					</li>
+
+					<li>
+						<p class="mb-2.5">Design systems and UI consistency</p>
+						<hr />
+					</li>
+
+					<li>
+						<p class="mb-2.5">Integration with backend APIs and product teams</p>
+						<hr />
+					</li>
+				</ul>
+			</section>
+		</main>
 	</body>
 </html>

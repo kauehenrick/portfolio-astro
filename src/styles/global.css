@@ -1,0 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --color-primary-black: #050514;
+	--color-secondary-black: #060612;
+	--color-primary-white: #f2f2f2;
+	--color-primary-gray: #1d1c1f;
+	--font-spacemono: "Space Mono", monospace, Courier;
+	--text-2-5xl: 1.75rem;
+  --font-sans: 'Roboto', 'sans-serif';
+}
+
+html {
+	scroll-behavior: smooth;
+}
