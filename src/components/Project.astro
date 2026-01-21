@@ -1,0 +1,68 @@
+---
+const {
+  ProjectTitle = "Projeto Teste",
+  ProjectSubtitle = "Lorem Ipsum",
+  ProjectDescription = "Lorem Ipsum placeholder",
+  ProjectImage,
+  ProjectTools = [],
+  SeeMoreLink,
+  GithubLink,
+  ProjectRow = "flex-row",
+} = Astro.props;
+---
+
+<section
+  class={`flex flex-col md:${ProjectRow} gap-6 rounded-lg drop-shadow-lg w-full`}
+>
+  <img
+    src={ProjectImage}
+    alt="Imagem referente ao projeto"
+    class="border-[0.25px] border-gray-300/10 rounded-lg md:rounded-l-lg object-cover md:w-75 h-auto"
+  />
+
+  <main class="flex flex-col justify-between h-auto min-h-full">
+    <div>
+      <p class="text-xl font-semibold">{ProjectTitle}</p>
+      <p class="text-xs dark:font-light mt-2 mb-3">
+        {ProjectSubtitle}
+      </p>
+      <p class="text-sm">{ProjectDescription}</p>
+
+      <div class="flex gap-3 mt-3 flex-wrap">
+        {
+          ProjectTools.map((skill: string) => (
+            <div class="flex justify-center items-center text-[0.625rem] dark:font-light">
+              <p>#{skill}</p>
+            </div>
+          ))
+        }
+      </div>
+    </div>
+
+    <footer class="flex justify-between items-center text-sm mt-auto mb-2 pt-2">
+      {
+        SeeMoreLink && (
+          <a
+            class="flex items-center gap-2 cursor-pointer"
+            href={SeeMoreLink}
+            target="_blank"
+          >
+            <p class="dark:font-light">See more</p>→
+          </a>
+        )
+      }
+
+      {
+        GithubLink && (
+          <a
+            class="flex items-center gap-2 cursor-pointer"
+            href={GithubLink}
+            target="_blank"
+          >
+            <span>GitHub</span>
+          </a>
+        )
+      }
+    </footer>
+  </main>
+</section>
