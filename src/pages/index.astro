@@ -2,8 +2,9 @@
 import "../../src/styles/global.css";
 import headerLogoImg from "../assets/header-logo.webp";
 import kaueWeberImg from "../assets/kaue-weber-image.webp";
-// import ToolsSection from "../components/ToolsSection";
 import ProjectsSection from "../components/ProjectSection.astro";
+import ToolsSection from "../components/ToolsSection.astro";
+import ContactForm from "../components/ContactForm.astro";
 ---
 
 <html lang="en">
@@ -126,6 +127,8 @@ import ProjectsSection from "../components/ProjectSection.astro";
 
       <section class="pb-15" id="tools">
         <p class="text-2-5xl mb-6">Tools</p>
+
+        <ToolsSection />
       </section>
 
       <section class="pb-15" id="projects">
@@ -133,22 +136,72 @@ import ProjectsSection from "../components/ProjectSection.astro";
 
         <ProjectsSection />
       </section>
+
+      <section
+        class="flex flex-col md:flex-row pb-12.5 gap-10 md:gap-20"
+        id="contact"
+      >
+        <div class="flex flex-col gap-6">
+          <h2 class="text-2-5xl md:max-w-52">
+            <p class="text-2-5xl">Let’s build something solid</p>
+          </h2>
+
+          <p>
+            If you’re looking for someone who understands both product and code,
+            let’s talk.
+            <br />{" "}
+            I’m waiting for your contact!
+          </p>
+
+          <ul class="flex flex-col gap-4">
+            <li class="flex items-center gap-1.5">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                fill="currentColor"
+                viewBox="0 0 256 256"
+                ><path
+                  d="M222.37,158.46l-47.11-21.11-.13-.06a16,16,0,0,0-15.17,1.4,8.12,8.12,0,0,0-.75.56L134.87,160c-15.42-7.49-31.34-23.29-38.83-38.51l20.78-24.71c.2-.25.39-.5.57-.77a16,16,0,0,0,1.32-15.06l0-.12L97.54,33.64a16,16,0,0,0-16.62-9.52A56.26,56.26,0,0,0,32,80c0,79.4,64.6,144,144,144a56.26,56.26,0,0,0,55.88-48.92A16,16,0,0,0,222.37,158.46ZM176,208A128.14,128.14,0,0,1,48,80,40.2,40.2,0,0,1,82.87,40a.61.61,0,0,0,0,.12l21,47L83.2,111.86a6.13,6.13,0,0,0-.57.77,16,16,0,0,0-1,15.7c9.06,18.53,27.73,37.06,46.46,46.11a16,16,0,0,0,15.75-1.14,8.44,8.44,0,0,0,.74-.56L168.89,152l47,21.05h0s.08,0,.11,0A40.21,40.21,0,0,1,176,208Z"
+                ></path></svg
+              >
+              <p class="dark:font-light text-sm">+55 (77) 9 9119-9961</p>
+            </li>
+
+            <li class="flex items-center gap-1.5">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                fill="currentColor"
+                viewBox="0 0 256 256"
+                ><path
+                  d="M224,48H32a8,8,0,0,0-8,8V192a16,16,0,0,0,16,16H216a16,16,0,0,0,16-16V56A8,8,0,0,0,224,48Zm-96,85.15L52.57,64H203.43ZM98.71,128,40,181.81V74.19Zm11.84,10.85,12,11.05a8,8,0,0,0,10.82,0l12-11.05,58,53.15H52.57ZM157.29,128,216,74.18V181.82Z"
+                ></path></svg
+              >
+              <p class="dark:font-light text-sm">kauehenrick@proton.me</p>
+            </li>
+          </ul>
+        </div>
+
+        <ContactForm />
+      </section>
     </main>
 
     <footer
       class="dark:bg-secondary-black flex items-center justify-between px-6 h-12.5 md:px-120 border-y-[0.1px] border-primary-gray"
     >
-      <p class="darK:font-light text-xs">© 2026 Kauê Weber.</p>
+      <p class="dark:font-light text-xs">© 2026 Kauê Weber.</p>
 
       <div class="flex gap-10">
         <button id="theme-toggle" class="cursor-pointer">
           <svg
             id="icon-sun"
-            class="dark:hidden"
+            class="hidden dark:inline"
             xmlns="http://www.w3.org/2000/svg"
             width="16"
             height="16"
-            fill="#101010"
+            fill="currentColor"
             viewBox="0 0 256 256"
             ><path
               d="M120,40V16a8,8,0,0,1,16,0V40a8,8,0,0,1-16,0Zm72,88a64,64,0,1,1-64-64A64.07,64.07,0,0,1,192,128Zm-16,0a48,48,0,1,0-48,48A48.05,48.05,0,0,0,176,128ZM58.34,69.66A8,8,0,0,0,69.66,58.34l-16-16A8,8,0,0,0,42.34,53.66Zm0,116.68-16,16a8,8,0,0,0,11.32,11.32l16-16a8,8,0,0,0-11.32-11.32ZM192,72a8,8,0,0,0,5.66-2.34l16-16a8,8,0,0,0-11.32-11.32l-16,16A8,8,0,0,0,192,72Zm5.66,114.34a8,8,0,0,0-11.32,11.32l16,16a8,8,0,0,0,11.32-11.32ZM48,128a8,8,0,0,0-8-8H16a8,8,0,0,0,0,16H40A8,8,0,0,0,48,128Zm80,80a8,8,0,0,0-8,8v24a8,8,0,0,0,16,0V216A8,8,0,0,0,128,208Zm112-88H216a8,8,0,0,0,0,16h24a8,8,0,0,0,0-16Z"
@@ -156,7 +209,7 @@ import ProjectsSection from "../components/ProjectSection.astro";
           >
           <svg
             id="icon-moon"
-            class="hidden dark:inline"
+            class="dark:hidden"
             xmlns="http://www.w3.org/2000/svg"
             width="16"
             height="16"
@@ -166,10 +219,6 @@ import ProjectsSection from "../components/ProjectSection.astro";
               d="M233.54,142.23a8,8,0,0,0-8-2,88.08,88.08,0,0,1-109.8-109.8,8,8,0,0,0-10-10,104.84,104.84,0,0,0-52.91,37A104,104,0,0,0,136,224a103.09,103.09,0,0,0,62.52-20.88,104.84,104.84,0,0,0,37-52.91A8,8,0,0,0,233.54,142.23ZM188.9,190.34A88,88,0,0,1,65.66,67.11a89,89,0,0,1,31.4-26A106,106,0,0,0,96,56,104.11,104.11,0,0,0,200,160a106,106,0,0,0,14.92-1.06A89,89,0,0,1,188.9,190.34Z"
             ></path></svg
           >
-          {
-            /* <PiSun id="icon-sun" className="dark:hidden" size={14} />
-          <PiMoon id="icon-moon" className="hidden dark:inline" size={14} /> */
-          }
         </button>
 
         <ul class="flex items-center gap-1.5">
@@ -209,35 +258,35 @@ import ProjectsSection from "../components/ProjectSection.astro";
       </div>
     </footer>
   </body>
-</html>
-<script>
-  const root = document.documentElement;
-  const toggle = document.getElementById("theme-toggle");
-  const sun = document.getElementById("icon-sun");
-  const moon = document.getElementById("icon-moon");
+  <script>
+    const root = document.documentElement;
+    const toggle = document.getElementById("theme-toggle");
+    const sun = document.getElementById("icon-sun");
+    const moon = document.getElementById("icon-moon");
 
-  const getInitialTheme = () => {
-    const saved = localStorage.getItem("theme");
-    if (saved) return saved;
+    const getInitialTheme = () => {
+      const saved = localStorage.getItem("theme");
+      if (saved) return saved;
 
-    return window.matchMedia("(prefers-color-scheme: dark)").matches
-      ? "dark"
-      : "light";
-  };
+      return window.matchMedia("(prefers-color-scheme: dark)").matches
+        ? "dark"
+        : "light";
+    };
 
-  const applyTheme = (theme: string) => {
-    root.classList.remove("light", "dark");
-    root.classList.add(theme);
-    localStorage.setItem("theme", theme);
-    sun.hidden = theme === "dark";
-    moon.hidden = theme !== "dark";
-  };
+    const applyTheme = (theme: string) => {
+      root.classList.remove("light", "dark");
+      root.classList.add(theme);
+      localStorage.setItem("theme", theme);
+      sun.hidden = theme !== "dark";
+      moon.hidden = theme === "dark";
+    };
 
-  let theme = getInitialTheme();
-  applyTheme(theme);
-
-  toggle.addEventListener("click", () => {
-    theme = theme === "dark" ? "light" : "dark";
+    let theme = getInitialTheme();
     applyTheme(theme);
-  });
-</script>
+
+    toggle.addEventListener("click", () => {
+      theme = theme === "dark" ? "light" : "dark";
+      applyTheme(theme);
+    });
+  </script>
+</html>

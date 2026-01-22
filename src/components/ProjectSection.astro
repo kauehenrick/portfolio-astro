@@ -1,8 +1,19 @@
 ---
 import imgProject1 from "../assets/project-1-image.webp";
+import imgProject2 from "../assets/pioneiros-site.webp"
 import Project from "./Project.astro";
 
 const projectList = [
+  {
+    title: "Pioneiros Landing Page",
+    subtitle: "Landing page developed for a client in the veterinary healthcare sector.",
+    description:
+      "Responsive landing page, focusing on layout, accessibility, performance and conversion.",
+    tools: ["ReactJS", "NextJS", "TailwindCSS"],
+    image: imgProject2,
+    seeMoreLink:
+      "https://pioneiros-site.vercel.app/",
+  },
   {
     title: "UI Design - BitPDV",
     subtitle: "New screens for an ERP",
@@ -16,16 +27,18 @@ const projectList = [
 ];
 ---
 
-<section>
-  {projectList.map((proj, index) => (
-    <Project
-      ProjectTitle={proj.title}
-      ProjectSubtitle={proj.subtitle}
-      ProjectDescription={proj.description}
-      ProjectImage={proj.image.src}
-      ProjectTools={proj.tools}
-      SeeMoreLink={proj.seeMoreLink}
-      ProjectRow={index % 2 === 0 ? "flex-row" : "flex-row-reverse"}
-    />
-  ))}
+<section class="space-y-15">
+  {
+    projectList.map((proj, index) => (
+      <Project
+        ProjectTitle={proj.title}
+        ProjectSubtitle={proj.subtitle}
+        ProjectDescription={proj.description}
+        ProjectImage={proj.image.src}
+        ProjectTools={proj.tools}
+        SeeMoreLink={proj.seeMoreLink}
+        ProjectRow={index % 2 === 0 ? "md:flex-row" : "md:flex-row-reverse"}
+      />
+    ))
+  }
 </section>
