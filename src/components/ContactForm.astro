@@ -2,17 +2,23 @@
 
 ---
 
-<form id="contact-form" class="flex flex-col w-full gap-8.5">
+<form
+  method="post"
+  id="contact-form"
+  class="flex flex-col w-full gap-8.5"
+>
   <input
     type="text"
     name="name"
     placeholder="NAME"
+    autocomplete="off"
     class="font-light text-xs h-8 border-b focus:outline-none"
   />
   <input
     type="email"
     name="email"
     placeholder="EMAIL"
+    autocomplete="off"
     class="font-light text-xs h-8 border-b focus:outline-none"
   />
 
