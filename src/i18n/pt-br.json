@@ -1,0 +1,52 @@
+{
+  "header": {
+    "role": "Engenheiro Front-end",
+    "intro": "Aplicações front-end focadas em arquitetura, performance e manutenção de longo prazo"
+  },
+  "skills": {
+    "title": "No que eu trabalho",
+    "items": [
+      "Arquitetura front-end (React, Next.js)",
+      "Gerenciamento de estado complexo e formulários",
+      "Design systems e consistência de UI",
+      "Integração com APIs backend e times de produto"
+    ]
+  },
+  "tools": {
+    "title": "Ferramentas",
+    "mainStack": "Stack principal",
+    "supporting": "Suporte"
+  },
+  "projects": {
+    "title": "Projetos",
+    "items": [
+      {
+        "name": "Pioneiros Landing Page",
+        "subtitle": "Landing page desenvolvida para um cliente da indústria de saúde veterinária.",
+        "description": "Landing page responsiva, com foco em layout, acessibilidade, performance e conversão.",
+        "tags": ["ReactJS", "NextJS", "TailwindCSS"],
+        "button": "Ver mais",
+        "link": "https://pioneiros-site.vercel.app/"
+      },
+      {
+        "name": "UI Design - BitPDV",
+        "subtitle": "Novas telas para um ERP",
+        "description": "Projeto de UI para um sistema ERP, especificamente para o ponto de venda e algumas de suas funções.",
+        "tags": ["Figma", "Adobe Photoshop", "UI/UX"],
+        "button": "Ver mais",
+        "link": "https://drive.google.com/file/d/1iypcRx72r7b0vFUmz5mf8wAJplISrBjX/view?usp=drive_link"
+      }
+    ]
+  },
+  "contact": {
+    "title": "Vamos construir algo sólido",
+    "text": "Se você procura alguém que entende produto e código, vamos conversar.",
+    "text2": "Estou aguardando seu contato!",
+    "form": {
+      "namePlaceholder": "NOME",
+      "emailPlaceholder": "EMAIL",
+      "messagePlaceholder": "Sua mensagem...",
+      "submitButton": "Enviar"
+    }
+  }
+}

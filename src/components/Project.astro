@@ -6,6 +6,7 @@ const {
   ProjectDescription = "Lorem Ipsum placeholder",
   ProjectImage,
   ProjectTools = [],
+  ProjectButton = "See more",
   SeeMoreLink,
   GithubLink,
   ProjectRow = "flex-row",
@@ -48,7 +49,7 @@ const {
             href={SeeMoreLink}
             target="_blank"
           >
-            <p class="dark:font-light">See more</p>→
+            <p class="dark:font-light">{ProjectButton}</p>→
           </a>
         )
       }

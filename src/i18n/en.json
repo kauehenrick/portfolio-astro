@@ -1,0 +1,52 @@
+{
+  "header": {
+    "role": "Front-end Engineer",
+    "intro": "Front-end applications focused on architecture, performance and long-term maintainability"
+  },
+  "skills": {
+    "title": "What I work with",
+    "items": [
+      "Front-end architecture (React, Next.js)",
+      "Complex state management and forms",
+      "Design systems and UI consistency",
+      "Integration with backend APIs and product teams"
+    ]
+  },
+  "tools": {
+    "title": "Tools",
+    "mainStack": "Main stack",
+    "supporting": "Supporting"
+  },
+  "projects": {
+    "title": "Projects",
+    "items": [
+      {
+        "name": "Pioneiros Landing Page",
+        "subtitle": "Landing page developed for a client in the veterinary healthcare industry.",
+        "description": "Responsive landing page, focusing on layout, accessibility, performance and conversion.",
+        "tags": ["ReactJS", "NextJS", "TailwindCSS"],
+        "button": "See more",
+        "link": "https://pioneiros-site.vercel.app/"
+      },
+      {
+        "name": "UI Design - BitPDV",
+        "subtitle": "New screens for an ERP",
+        "description": "UI project for an ERP system, specifically for the point of sale and some of its functions.",
+        "tags": ["Figma", "Adobe Photoshop", "UI/UX"],
+        "button": "See more",
+        "link": "https://drive.google.com/file/d/1iypcRx72r7b0vFUmz5mf8wAJplISrBjX/view?usp=drive_link"
+      }
+    ]
+  },
+  "contact": {
+    "title": "Let's build something solid",
+    "text": "If you're looking for someone who understands both product and code, let's talk.",
+    "text2": "I'm waiting for your contact!",
+    "form": {
+      "namePlaceholder": "NAME",
+      "emailPlaceholder": "EMAIL",
+      "messagePlaceholder": "Your message...",
+      "submitButton": "Send"
+    }
+  }
+}

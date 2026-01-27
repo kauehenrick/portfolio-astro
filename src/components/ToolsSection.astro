@@ -15,6 +15,10 @@ import tsLogoImg from "../assets/typescript.svg";
 import zodLogoImg from "../assets/zod.svg";
 import zustandLogoImg from "../assets/zustand.svg";
 import ToolsGroup from "./ToolsGroup.astro";
+import { getMessages } from "../i18n";
+
+const locale = Astro.currentLocale ?? "en";
+const t = getMessages(locale);
 
 const mainStack = [
   { img: tsLogoImg, name: "TypeScript" },
@@ -37,7 +41,8 @@ const secondaryStack = [
   { img: figmaLogoImg, name: "Figma" },
 ];
 ---
+
 <div class="flex flex-col gap-6">
-	<ToolsGroup title="Main stack" tools={mainStack} />
-	<ToolsGroup title="Supporting" tools={secondaryStack} />
+  <ToolsGroup title={t.tools.mainStack} tools={mainStack} />
+  <ToolsGroup title={t.tools.supporting} tools={secondaryStack} />
 </div>

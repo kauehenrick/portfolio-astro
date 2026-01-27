@@ -6,6 +6,11 @@ import ProjectsSection from "../components/ProjectSection.astro";
 import ToolsSection from "../components/ToolsSection.astro";
 import ContactForm from "../components/ContactForm.astro";
 import Image from "astro/components/Image.astro";
+import LanguagePicker from "../components/LanguagePicker.astro";
+import { getMessages } from "../i18n";
+
+const locale = Astro.currentLocale ?? "en";
+const t = getMessages(locale);
 ---
 
 <html lang="en">
@@ -33,12 +38,11 @@ import Image from "astro/components/Image.astro";
           />
 
           <ul class="flex dark:font-light text-sm mr-2">
-            <li>Front-end Engineer</li>
+            <li>{t.header.role}</li>
           </ul>
 
           <p class="max-w-75">
-            Front-end applications focused on architecture, performance, and
-            long-term maintainability.
+            {t.header.intro}
           </p>
 
           <ul class="flex dark:font-light text-sm gap-3">
@@ -99,41 +103,28 @@ import Image from "astro/components/Image.astro";
       </section>
 
       <section class="pb-15" id="skills">
-        <p class="text-2-5xl mb-6">What I work with</p>
+        <p class="text-2-5xl mb-6">{t.skills.title}</p>
 
         <ul class="flex flex-col gap-3 text-lg">
-          <li>
-            <p class="mb-2.5">Front-end architecture (React, Next.js)</p>
-            <hr />
-          </li>
-
-          <li>
-            <p class="mb-2.5">Complex state management and forms</p>
-            <hr />
-          </li>
-
-          <li>
-            <p class="mb-2.5">Design systems and UI consistency</p>
-            <hr />
-          </li>
-
-          <li>
-            <p class="mb-2.5">
-              Integration with backend APIs and product teams
-            </p>
-            <hr />
-          </li>
+          {
+            t.skills.items.map((skill) => (
+              <li>
+                <p class="mb-2.5">{skill}</p>
+                <hr />
+              </li>
+            ))
+          }
         </ul>
       </section>
 
       <section class="pb-15" id="tools">
-        <p class="text-2-5xl mb-6">Tools</p>
+        <p class="text-2-5xl mb-6">{t.tools.title}</p>
 
         <ToolsSection />
       </section>
 
       <section class="pb-15" id="projects">
-        <p class="text-2-5xl mb-6">Projects</p>
+        <p class="text-2-5xl mb-6">{t.projects.title}</p>
 
         <ProjectsSection />
       </section>
@@ -144,14 +135,13 @@ import Image from "astro/components/Image.astro";
       >
         <div class="flex flex-col gap-6">
           <h2 class="text-2-5xl md:max-w-52">
-            <p class="text-2-5xl">Let’s build something solid</p>
+            <p class="text-2-5xl">{t.contact.title}</p>
           </h2>
 
           <p>
-            If you’re looking for someone who understands both product and code,
-            let’s talk.
+            {t.contact.text}
             <br />{" "}
-            I’m waiting for your contact!
+            {t.contact.text2}
           </p>
 
           <ul class="flex flex-col gap-4">
@@ -194,7 +184,9 @@ import Image from "astro/components/Image.astro";
     >
       <p class="dark:font-light text-xs">© 2026 Kauê Weber.</p>
 
-      <div class="flex gap-10">
+      <div class="flex items-center gap-10">
+        <LanguagePicker />
+
         <button id="theme-toggle" class="cursor-pointer">
           <svg
             id="icon-sun"

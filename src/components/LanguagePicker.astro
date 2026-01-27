@@ -1,0 +1,26 @@
+---
+import brazilLogoImg from "../assets/brasil.webp";
+import usaLogoImg from "../assets/estados-unidos.webp";
+import { Image } from "astro:assets";
+
+const { pathname } = Astro.url;
+
+const stripLocale = (path: string) =>
+  path.replace(/^\/(pt-br|en)(?=\/|$)/, "") || "/";
+
+const basePath = stripLocale(pathname);
+
+const locale = pathname.startsWith("/pt-br") ? "pt-br" : "en";
+---
+
+<a
+  href={locale === "en" ? `/pt-br${basePath}` : basePath}
+  class="h-fit"
+>
+  <Image
+    src={locale === "en" ? brazilLogoImg : usaLogoImg}
+    alt={`logo ${brazilLogoImg}`}
+    class="size-3.5"
+    loading="eager"
+  />
+</a>
