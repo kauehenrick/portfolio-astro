@@ -5,6 +5,7 @@ import kaueWeberImg from "../assets/kaue-weber-image.webp";
 import ProjectsSection from "../components/ProjectSection.astro";
 import ToolsSection from "../components/ToolsSection.astro";
 import ContactForm from "../components/ContactForm.astro";
+import Image from "astro/components/Image.astro";
 ---
 
 <html lang="en">
@@ -24,10 +25,11 @@ import ContactForm from "../components/ContactForm.astro";
         class="flex flex-col md:flex-row justify-between py-12.5 gap-5"
       >
         <div class="flex flex-col gap-6">
-          <img
-            src={headerLogoImg.src}
+          <Image
+            src={headerLogoImg}
             class="w-25 h-12.25 in-dark:invert"
             alt=""
+            loading="eager"
           />
 
           <ul class="flex dark:font-light text-sm mr-2">
@@ -35,7 +37,8 @@ import ContactForm from "../components/ContactForm.astro";
           </ul>
 
           <p class="max-w-75">
-            Front-end applications focused on architecture, performance, and long-term maintainability.
+            Front-end applications focused on architecture, performance, and
+            long-term maintainability.
           </p>
 
           <ul class="flex dark:font-light text-sm gap-3">
@@ -87,10 +90,11 @@ import ContactForm from "../components/ContactForm.astro";
           </ul>
         </div>
 
-        <img
-          src={kaueWeberImg.src}
+        <Image
+          src={kaueWeberImg}
           class="md:w-62 rounded-b md:rounded-r"
           alt=""
+          loading="eager"
         />
       </section>
 

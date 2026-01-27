@@ -1,0 +1,151 @@
+---
+import "../../src/styles/global.css";
+import headerLogoImg from "../assets/header-logo.webp";
+import kaueWeberImg from "../assets/kaue-weber-image.webp";
+import ProjectsSection from "../../components/ProjectSection.astro";
+import ToolsSection from "../../components/ToolsSection.astro";
+import ContactForm from "../../components/ContactForm.astro";
+import { Image } from "astro:assets";
+---
+
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/ico" href="/kh-icon.ico" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <title>Kauê Weber</title>
+  </head>
+
+  <body
+    class="bg-primary-white text-primary-black dark:bg-primary-black dark:text-primary-white"
+  >
+    <main class="md:w-2xl mx-5 md:mx-auto">
+      <section
+        id="home"
+        class="flex flex-col md:flex-row justify-between py-12.5 gap-5"
+      >
+        <div class="flex flex-col gap-6">
+          <Image
+            src={headerLogoImg}
+            class="w-25 h-12.25 in-dark:invert"
+            alt=""
+            loading="eager"
+          />
+
+          <ul class="flex dark:font-light text-sm mr-2">
+            <li>Engenheiro Front-end</li>
+          </ul>
+
+          <p class="max-w-75">
+            Aplicações front-end focadas em arquitetura, performance e
+            manutenção de longo prazo.
+          </p>
+
+          <ul class="flex dark:font-light text-sm gap-3">
+            <li>
+              <a
+                href="https://github.com/kauehenrick"
+                class="flex items-center gap-1.5"
+                target="blank"
+              >
+                <p>GitHub</p>
+              </a>
+            </li>
+
+            <li>
+              <a
+                href="https://www.linkedin.com/in/kaueweber/"
+                class="flex items-center gap-1.5"
+                target="blank"
+              >
+                <p>LinkedIn</p>
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <Image
+          src={kaueWeberImg}
+          class="md:w-62 rounded-b md:rounded-r"
+          alt=""
+          loading="eager"
+        />
+      </section>
+
+      <section class="pb-15" id="skills">
+        <p class="text-2-5xl mb-6">No que eu trabalho</p>
+
+        <ul class="flex flex-col gap-3 text-lg">
+          <li>
+            <p class="mb-2.5">Arquitetura front-end (React, Next.js)</p>
+            <hr />
+          </li>
+
+          <li>
+            <p class="mb-2.5">Gerenciamento de estado complexo e formulários</p>
+            <hr />
+          </li>
+
+          <li>
+            <p class="mb-2.5">Design systems e consistência de UI</p>
+            <hr />
+          </li>
+
+          <li>
+            <p class="mb-2.5">
+              Integração com APIs de backend e times de produto
+            </p>
+            <hr />
+          </li>
+        </ul>
+      </section>
+
+      <section class="pb-15" id="tools">
+        <p class="text-2-5xl mb-6">Ferramentas</p>
+        <ToolsSection />
+      </section>
+
+      <section class="pb-15" id="projects">
+        <p class="text-2-5xl mb-6">Projetos</p>
+        <ProjectsSection />
+      </section>
+
+      <section
+        class="flex flex-col md:flex-row pb-12.5 gap-10 md:gap-20"
+        id="contact"
+      >
+        <div class="flex flex-col gap-6">
+          <h2 class="text-2-5xl md:max-w-52">
+            <p class="text-2-5xl">Vamos construir algo sólido</p>
+          </h2>
+
+          <p>
+            Se você procura alguém que entende produto e código, vamos
+            conversar.
+            <br />
+            Estou aguardando seu contato.
+          </p>
+
+          <ul class="flex flex-col gap-4">
+            <li class="flex items-center gap-1.5">
+              <p class="dark:font-light text-sm">+55 (77) 9 9119-9961</p>
+            </li>
+
+            <li class="flex items-center gap-1.5">
+              <p class="dark:font-light text-sm">kauehenrick@proton.me</p>
+            </li>
+          </ul>
+        </div>
+
+        <ContactForm />
+      </section>
+    </main>
+
+    <footer
+      class="dark:bg-secondary-black flex items-center justify-between px-6 h-12.5 xl:px-120 border-y-[0.1px] border-primary-gray"
+    >
+      <p class="dark:font-light text-xs">© 2026 Kauê Weber.</p>
+    </footer>
+  </body>
+</html>

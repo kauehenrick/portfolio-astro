@@ -1,10 +1,11 @@
 ---
 const { img, name } = Astro.props;
+import { Image } from "astro:assets";
 ---
 
 <div
   class="flex items-center gap-2 px-3 py-1.5 border-[0.1px] border-primary-gray rounded w-fit hover:border-primary-white transition duration-200"
 >
-  <img src={img.src} alt={`${name} logo`} class="h-4" />
+  <Image src={img} alt={`${name} logo`} class="h-4" loading="eager" />
   <p class="dark:font-light text-sm">{name}</p>
 </div>
