@@ -1,15 +1,15 @@
 {
   "header": {
     "role": "Front-end Engineer",
-    "intro": "Front-end applications focused on architecture, performance and long-term maintainability"
+    "intro": "I build front-end applications with strong architecture, performance, and seamless backend integrations."
   },
   "skills": {
-    "title": "What I work with",
+    "title": "What I solve",
     "items": [
       "Front-end architecture (React, Next.js)",
-      "Complex state management and forms",
+      "Complex state management and dynamic forms",
       "Design systems and UI consistency",
-      "Integration with backend APIs and product teams"
+      "Integration with backend APIs (Node.js, Laravel) and product teams"
     ]
   },
   "tools": {
@@ -22,16 +22,16 @@
     "items": [
       {
         "name": "Pioneiros Landing Page",
-        "subtitle": "Landing page developed for a client in the veterinary healthcare industry.",
-        "description": "Responsive landing page, focusing on layout, accessibility, performance and conversion.",
+        "subtitle": "Landing page built for a veterinary healthcare client.",
+        "description": "Focused on performance, accessibility, and conversion-driven layout decisions.",
         "tags": ["ReactJS", "NextJS", "TailwindCSS"],
         "button": "See more",
         "link": "https://pioneiros-site.vercel.app/"
       },
       {
         "name": "UI Design - BitPDV",
-        "subtitle": "New screens for an ERP",
-        "description": "UI project for an ERP system, specifically for the point of sale and some of its functions.",
+        "subtitle": "UI redesign for ERP system (point of sale and core modules).",
+        "description": "Focused on usability, clarity, and real operational workflows.",
         "tags": ["Figma", "Adobe Photoshop", "UI/UX"],
         "button": "See more",
         "link": "https://drive.google.com/file/d/1iypcRx72r7b0vFUmz5mf8wAJplISrBjX/view?usp=drive_link"
@@ -40,8 +40,8 @@
   },
   "contact": {
     "title": "Let's build something solid",
-    "text": "If you're looking for someone who understands both product and code, let's talk.",
-    "text2": "I'm waiting for your contact!",
+    "text": "If you need someone who understands both product and code, I can help.",
+    "text2": "Available for freelance and full-time opportunities.",
     "form": {
       "namePlaceholder": "NAME",
       "emailPlaceholder": "EMAIL",

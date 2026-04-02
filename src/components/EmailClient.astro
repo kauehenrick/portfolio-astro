@@ -1,0 +1,26 @@
+<script>
+  import emailjs from "@emailjs/browser";
+
+  emailjs.init(import.meta.env.PUBLIC_EMAILJS_PUBLIC_KEY);
+
+  const form = document.getElementById("contact-form");
+
+  if (form instanceof HTMLFormElement) {
+    form.addEventListener("submit", async (e) => {
+      e.preventDefault();
+
+      try {
+        await emailjs.sendForm(
+          import.meta.env.PUBLIC_EMAILJS_SERVICE_ID,
+          import.meta.env.PUBLIC_EMAILJS_TEMPLATE_ID,
+          form,
+        );
+
+        form.reset();
+        console.log("Email enviado");
+      } catch (err) {
+        console.error("Erro ao enviar email", err);
+      }
+    });
+  }
+</script>

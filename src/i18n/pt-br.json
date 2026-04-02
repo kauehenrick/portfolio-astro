@@ -1,37 +1,37 @@
 {
   "header": {
     "role": "Engenheiro Front-end",
-    "intro": "Aplicações front-end focadas em arquitetura, performance e manutenção de longo prazo"
+    "intro": "Construo aplicações front-end com arquitetura sólida, alta performance e integrações fluidas com o back-end."
   },
   "skills": {
-    "title": "No que eu trabalho",
+    "title": "O que eu resolvo",
     "items": [
       "Arquitetura front-end (React, Next.js)",
-      "Gerenciamento de estado complexo e formulários",
+      "Gerenciamento de estado complexo e formulários dinâmicos",
       "Design systems e consistência de UI",
-      "Integração com APIs backend e times de produto"
+      "Integração com APIs back-end (Node.js, Laravel) e times de produto"
     ]
   },
   "tools": {
     "title": "Ferramentas",
     "mainStack": "Stack principal",
-    "supporting": "Suporte"
+    "supporting": "Complementares"
   },
   "projects": {
     "title": "Projetos",
     "items": [
       {
-        "name": "Pioneiros Landing Page",
-        "subtitle": "Landing page desenvolvida para um cliente da indústria de saúde veterinária.",
-        "description": "Landing page responsiva, com foco em layout, acessibilidade, performance e conversão.",
+        "name": "Landing Page Pioneiros",
+        "subtitle": "Landing page desenvolvida para um cliente de saúde veterinária.",
+        "description": "Foco em performance, acessibilidade e decisões de layout orientadas à conversão.",
         "tags": ["ReactJS", "NextJS", "TailwindCSS"],
         "button": "Ver mais",
         "link": "https://pioneiros-site.vercel.app/"
       },
       {
         "name": "UI Design - BitPDV",
-        "subtitle": "Novas telas para um ERP",
-        "description": "Projeto de UI para um sistema ERP, especificamente para o ponto de venda e algumas de suas funções.",
+        "subtitle": "Redesign de UI para sistema ERP (ponto de venda e módulos principais).",
+        "description": "Foco em usabilidade, clareza e fluxos operacionais reais.",
         "tags": ["Figma", "Adobe Photoshop", "UI/UX"],
         "button": "Ver mais",
         "link": "https://drive.google.com/file/d/1iypcRx72r7b0vFUmz5mf8wAJplISrBjX/view?usp=drive_link"
@@ -40,11 +40,11 @@
   },
   "contact": {
     "title": "Vamos construir algo sólido",
-    "text": "Se você procura alguém que entende produto e código, vamos conversar.",
-    "text2": "Estou aguardando seu contato!",
+    "text": "Se você precisa de alguém que entende tanto de produto quanto de código, posso ajudar.",
+    "text2": "Disponível para oportunidades freelance e em tempo integral.",
     "form": {
       "namePlaceholder": "NOME",
-      "emailPlaceholder": "EMAIL",
+      "emailPlaceholder": "E-MAIL",
       "messagePlaceholder": "Sua mensagem...",
       "submitButton": "Enviar"
     }
