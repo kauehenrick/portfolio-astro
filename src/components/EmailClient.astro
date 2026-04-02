@@ -1,11 +1,16 @@
 <script>
   import emailjs from "@emailjs/browser";
 
+  const { Notyf } = await import("notyf");
+  const notyf = new Notyf();
+
   emailjs.init(import.meta.env.PUBLIC_EMAILJS_PUBLIC_KEY);
 
-  const form = document.getElementById("contact-form");
+  const form = document.getElementById(
+    "contact-form",
+  ) as HTMLFormElement | null;
 
-  if (form instanceof HTMLFormElement) {
+  if (form) {
     form.addEventListener("submit", async (e) => {
       e.preventDefault();
 
@@ -17,9 +22,9 @@
         );
 
         form.reset();
-        console.log("Email enviado");
+        notyf.success("Email enviado");
       } catch (err) {
-        console.error("Erro ao enviar email", err);
+        notyf.error("Erro ao enviar email");
       }
     });
   }
