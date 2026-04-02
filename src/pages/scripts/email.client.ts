@@ -1,5 +1,5 @@
 import emailjs from "@emailjs/browser";
-import { Notyf } from "notyf";
+const { Notyf } = await import('notyf');
 
 var notyf = new Notyf();
 
