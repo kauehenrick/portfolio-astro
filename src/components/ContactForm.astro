@@ -1,16 +1,11 @@
 ---
 import { getMessages } from "../i18n";
-import EmailClient from "./EmailClient.astro";
 
 const locale = Astro.currentLocale ?? "en";
 const t = getMessages(locale);
 ---
 
-<form
-  method="post"
-  id="contact-form"
-  class="flex flex-col w-full gap-8.5"
->
+<form method="post" id="contact-form" class="flex flex-col w-full gap-8.5">
   <input
     type="text"
     name="name"
@@ -42,5 +37,34 @@ const t = getMessages(locale);
   </button>
 </form>
 
+<script>
+  import emailjs from "@emailjs/browser";
 
-<EmailClient client:load />
+  const { Notyf } = await import("notyf");
+  const notyf = new Notyf();
+
+  emailjs.init(import.meta.env.PUBLIC_EMAILJS_PUBLIC_KEY);
+
+  const form = document.getElementById(
+    "contact-form",
+  ) as HTMLFormElement | null;
+
+  if (form) {
+    form.addEventListener("submit", async (e) => {
+      e.preventDefault();
+
+      try {
+        await emailjs.sendForm(
+          import.meta.env.PUBLIC_EMAILJS_SERVICE_ID,
+          import.meta.env.PUBLIC_EMAILJS_TEMPLATE_ID,
+          form,
+        );
+
+        form.reset();
+        notyf.success("Email enviado");
+      } catch (err) {
+        notyf.error("Erro ao enviar email");
+      }
+    });
+  }
+</script>

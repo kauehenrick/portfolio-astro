@@ -21,14 +21,6 @@
     "title": "Projects",
     "items": [
       {
-        "name": "Pioneiros Landing Page",
-        "subtitle": "Landing page built for a veterinary healthcare client.",
-        "description": "Focused on performance, accessibility, and conversion-driven layout decisions.",
-        "tags": ["ReactJS", "NextJS", "TailwindCSS"],
-        "button": "See more",
-        "link": "https://pioneiros-site.vercel.app/"
-      },
-      {
         "name": "UI Design - BitPDV",
         "subtitle": "UI redesign for ERP system (point of sale and core modules).",
         "description": "Focused on usability, clarity, and real operational workflows.",
