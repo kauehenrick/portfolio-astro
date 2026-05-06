@@ -21,14 +21,6 @@
     "title": "Projetos",
     "items": [
       {
-        "name": "Landing Page Pioneiros",
-        "subtitle": "Landing page desenvolvida para um cliente de saúde veterinária.",
-        "description": "Foco em performance, acessibilidade e decisões de layout orientadas à conversão.",
-        "tags": ["ReactJS", "NextJS", "TailwindCSS"],
-        "button": "Ver mais",
-        "link": "https://pioneiros-site.vercel.app/"
-      },
-      {
         "name": "UI Design - BitPDV",
         "subtitle": "Redesign de UI para sistema ERP (ponto de venda e módulos principais).",
         "description": "Foco em usabilidade, clareza e fluxos operacionais reais.",
