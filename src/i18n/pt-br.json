@@ -1,29 +1,30 @@
 {
   "header": {
-    "role": "Engenheiro Front-end",
-    "intro": "Construo aplicações front-end com arquitetura sólida, alta performance e integrações fluidas com o back-end."
+    "role": "Engenheiro Fullstack",
+    "intro": "Construo aplicações web escaláveis com arquitetura sólida, interfaces modernas e integrações confiáveis entre frontend e backend."
   },
   "skills": {
     "title": "O que eu resolvo",
     "items": [
-      "Arquitetura front-end (React, Next.js)",
-      "Gerenciamento de estado complexo e formulários dinâmicos",
-      "Design systems e consistência de UI",
-      "Integração com APIs back-end (Node.js, Laravel) e times de produto"
+      "Arquitetura fullstack (React, Next.js, Node.js, Laravel)",
+      "Fluxos de negócio complexos, APIs e sistemas dinâmicos",
+      "Interfaces modernas com foco em usabilidade e performance",
+      "Integração com bancos de dados, automações e times de produto"
     ]
   },
   "tools": {
     "title": "Ferramentas",
-    "mainStack": "Stack principal",
-    "supporting": "Complementares"
+    "frontend": "Frontend",
+    "backend": "Backend",
+    "others": "Outros"
   },
   "projects": {
     "title": "Projetos",
     "items": [
       {
         "name": "UI Design - BitPDV",
-        "subtitle": "Redesign de UI para sistema ERP (ponto de venda e módulos principais).",
-        "description": "Foco em usabilidade, clareza e fluxos operacionais reais.",
+        "subtitle": "Redesign de ERP para ponto de venda e módulos operacionais.",
+        "description": "Focado em usabilidade, clareza operacional e escalabilidade dos fluxos de trabalho.",
         "tags": ["Figma", "Adobe Photoshop", "UI/UX"],
         "button": "Ver mais",
         "link": "https://drive.google.com/file/d/1iypcRx72r7b0vFUmz5mf8wAJplISrBjX/view?usp=drive_link"
@@ -31,9 +32,9 @@
     ]
   },
   "contact": {
-    "title": "Vamos construir algo sólido",
-    "text": "Se você precisa de alguém que entende tanto de produto quanto de código, posso ajudar.",
-    "text2": "Disponível para oportunidades freelance e em tempo integral.",
+    "title": "Vamos construir algo confiável",
+    "text": "Se você precisa de alguém que entende produto, frontend e backend de forma integrada, posso ajudar.",
+    "text2": "Disponível para projetos freelance e oportunidades full-time.",
     "form": {
       "namePlaceholder": "NOME",
       "emailPlaceholder": "E-MAIL",

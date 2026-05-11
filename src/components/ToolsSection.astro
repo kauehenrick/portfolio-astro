@@ -21,7 +21,7 @@ import { getMessages } from "../i18n";
 const locale = Astro.currentLocale ?? "en";
 const t = getMessages(locale);
 
-const mainStack = [
+const frontend = [
   { img: tsLogoImg, name: "TypeScript" },
   { img: jsLogoImg, name: "JavaScript" },
   { img: reactjsLogoImg, name: "ReactJS" },
@@ -32,12 +32,15 @@ const mainStack = [
   { img: shadcnuiLogoImg, name: "shadcn/ui" },
 ];
 
-const secondaryStack = [
+const backend = [
   { img: nodejsLogoImg, name: "Node.js" },
   { img: nestjsLogoImg, name: "NestJS" },
   { img: laravelLogoImg, name: "Laravel" },
   { img: postgresqlLogoImg, name: "PostgreSQL" },
   { img: mysqlLogoImg, name: "MySQL" },
+];
+
+const others = [
   { img: gitLogoImg, name: "Git" },
   { img: linuxLogoImg, name: "Linux" },
   { img: figmaLogoImg, name: "Figma" },
@@ -45,6 +48,7 @@ const secondaryStack = [
 ---
 
 <div class="flex flex-col gap-6">
-  <ToolsGroup title={t.tools.mainStack} tools={mainStack} />
-  <ToolsGroup title={t.tools.supporting} tools={secondaryStack} />
+  <ToolsGroup title={t.tools.frontend} tools={frontend} />
+  <ToolsGroup title={t.tools.backend} tools={backend} />
+    <ToolsGroup title={t.tools.others} tools={others} />
 </div>
