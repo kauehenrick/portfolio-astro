@@ -62,7 +62,7 @@ const t = getMessages(locale);
 
         form.reset();
         notyf.success("Email enviado");
-      } catch (err) {
+      } catch {
         notyf.error("Erro ao enviar email");
       }
     });

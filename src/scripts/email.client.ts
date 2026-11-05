@@ -1,13 +1,11 @@
 import emailjs from "@emailjs/browser";
-const { Notyf } = await import('notyf');
+const { Notyf } = await import("notyf");
 
-var notyf = new Notyf();
+const notyf = new Notyf();
 
 emailjs.init(import.meta.env.PUBLIC_EMAILJS_PUBLIC_KEY);
 
-const form = document.getElementById(
-  "contact-form"
-) as HTMLFormElement | null;
+const form = document.getElementById("contact-form") as HTMLFormElement | null;
 
 if (form) {
   form.addEventListener("submit", async (e) => {
@@ -22,7 +20,7 @@ if (form) {
 
       form.reset();
       notyf.success("Email enviado");
-    } catch (err) {
+    } catch {
       notyf.error("Erro ao enviar email");
     }
   });

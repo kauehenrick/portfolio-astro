@@ -4,9 +4,9 @@ import {
   siFigma,
   siGit,
   siJavascript,
+  siKubernetes,
   siLaravel,
   siLinux,
-  siKubernetes,
   siMysql,
   siNestjs,
   siNextdotjs,
@@ -17,10 +17,10 @@ import {
   siTailwindcss,
   siTypescript,
   siZod,
-  siDo
 } from "simple-icons";
-import ToolsGroup from "./ToolsGroup.astro";
+
 import { getMessages } from "../i18n";
+import ToolsGroup from "./ToolsGroup.astro";
 
 const locale = Astro.currentLocale ?? "en";
 const t = getMessages(locale);
@@ -32,7 +32,7 @@ const frontend = [
   { icon: siNextdotjs, name: "NextJS" },
   { icon: siTailwindcss, name: "TailwindCSS" },
   { icon: siZod, name: "Zod" },
-  { icon: siShadcnui, name: "shadcn/ui", useBrandColor: false },
+  { icon: siShadcnui, name: "shadcn/ui" },
 ];
 
 const backend = [
@@ -46,7 +46,6 @@ const backend = [
 const others = [
   { icon: siDocker, name: "Docker" },
   { icon: siKubernetes, name: "Kubernetes" },
-  { name: "AWS" },
   { icon: siGit, name: "Git" },
   { icon: siLinux, name: "Linux" },
   { icon: siFigma, name: "Figma" },

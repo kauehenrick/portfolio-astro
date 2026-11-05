@@ -3,7 +3,7 @@ import ptBR from "./pt-br.json";
 
 const messages = {
   en,
-  "pt-br": ptBR
+  "pt-br": ptBR,
 };
 
 export type Locale = keyof typeof messages;

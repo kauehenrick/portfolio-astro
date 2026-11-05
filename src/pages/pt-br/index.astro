@@ -1,12 +1,14 @@
 ---
 import "../../../src/styles/global.css";
+
+import Image from "astro/components/Image.astro";
+
 import headerLogoImg from "../../assets/header-logo.webp";
 import kaueWeberImg from "../../assets/kaue-weber-image.webp";
+import ContactForm from "../../components/ContactForm.astro";
+import LanguagePicker from "../../components/LanguagePicker.astro";
 import ProjectsSection from "../../components/ProjectSection.astro";
 import ToolsSection from "../../components/ToolsSection.astro";
-import ContactForm from "../../components/ContactForm.astro";
-import Image from "astro/components/Image.astro";
-import LanguagePicker from "../../components/LanguagePicker.astro";
 import { getMessages } from "../../i18n";
 
 const locale = Astro.currentLocale ?? "en";
