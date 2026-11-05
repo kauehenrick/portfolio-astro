@@ -28,6 +28,14 @@
         "tags": ["Figma", "Adobe Photoshop", "UI/UX"],
         "button": "See more",
         "link": "https://drive.google.com/file/d/1iypcRx72r7b0vFUmz5mf8wAJplISrBjX/view?usp=drive_link"
+      },
+      {
+        "name": "Juninhos - Community Website Redesign",
+        "subtitle": "Website redesign for a volunteer-driven technology community.",
+        "description": "Redesigned the community's digital experience, focusing on modern UI, intuitive navigation, clear content hierarchy, and accessibility to make technology education and community participation more approachable for beginners.",
+        "tags": ["Figma", "UI/UX", "ReactJS", "Typescript"],
+        "button": "See more",
+        "link": "https://juninhos.com"
       }
     ]
   },
