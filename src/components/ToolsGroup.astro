@@ -9,6 +9,14 @@ import ToolItem from "./ToolItem.astro";
   </h3>
 
   <section class="flex flex-wrap gap-2">
-    {tools.map((tool) => <ToolItem name={tool.name} img={tool.img} />)}
+    {
+      tools.map((tool) => (
+        <ToolItem
+          name={tool.name}
+          icon={tool.icon}
+          useBrandColor={tool.useBrandColor}
+        />
+      ))
+    }
   </section>
 </div>

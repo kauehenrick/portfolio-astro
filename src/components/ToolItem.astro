@@ -1,11 +1,21 @@
 ---
-const { img, name } = Astro.props;
-import { Image } from "astro:assets";
+import SimpleIcon from "./SimpleIcon.astro";
+
+const { icon, name, useBrandColor = true } = Astro.props;
 ---
 
 <div
   class="flex items-center gap-2 px-3 py-1.5 border-[0.1px] border-primary-gray rounded w-fit hover:border-primary-white transition duration-200"
 >
-  <Image src={img} alt={`${name} logo`} class="h-4" loading="eager" />
+  {
+    icon && (
+      <SimpleIcon
+        icon={icon}
+        title={`${name} logo`}
+        class="h-4 w-4"
+        useBrandColor={useBrandColor}
+      />
+    )
+  }
   <p class="dark:font-light text-sm">{name}</p>
 </div>

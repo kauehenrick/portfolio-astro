@@ -1,0 +1,28 @@
+---
+import type { SimpleIcon as SimpleIconData } from "simple-icons";
+
+const {
+  icon,
+  class: className = "",
+  title = icon.title,
+  useBrandColor = true,
+  color = `#${icon.hex}`,
+} = Astro.props as {
+  icon: SimpleIconData;
+  class?: string;
+  title?: string;
+  useBrandColor?: boolean;
+  color?: string;
+};
+---
+
+<svg
+  class={className}
+  viewBox="0 0 24 24"
+  fill={useBrandColor ? color : "currentColor"}
+  role="img"
+  aria-label={title}
+  xmlns="http://www.w3.org/2000/svg"
+>
+  <path d={icon.path}></path>
+</svg>

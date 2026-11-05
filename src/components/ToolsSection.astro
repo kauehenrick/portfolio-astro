@@ -1,54 +1,60 @@
 ---
-import figmaLogoImg from "../assets/figma.svg";
-import gitLogoImg from "../assets/git.svg";
-import jsLogoImg from "../assets/javascript.svg";
-import linuxLogoImg from "../assets/linux.svg";
-import mysqlLogoImg from "../assets/mysql.svg";
-import nestjsLogoImg from "../assets/nestjs.svg";
-import nextjsLogoImg from "../assets/nextjs.svg";
-import nodejsLogoImg from "../assets/nodejs.svg";
-import postgresqlLogoImg from "../assets/postgresql.svg";
-import reactjsLogoImg from "../assets/reactjs.svg";
-import shadcnuiLogoImg from "../assets/shadcnui.svg";
-import tailwindcssLogoImg from "../assets/tailwindcss.svg";
-import tsLogoImg from "../assets/typescript.svg";
-import zodLogoImg from "../assets/zod.svg";
-import zustandLogoImg from "../assets/zustand.svg";
+import {
+  siDocker,
+  siFigma,
+  siGit,
+  siJavascript,
+  siLaravel,
+  siLinux,
+  siKubernetes,
+  siMysql,
+  siNestjs,
+  siNextdotjs,
+  siNodedotjs,
+  siPostgresql,
+  siReact,
+  siShadcnui,
+  siTailwindcss,
+  siTypescript,
+  siZod,
+  siDo
+} from "simple-icons";
 import ToolsGroup from "./ToolsGroup.astro";
-import laravelLogoImg from "../assets/laravel.svg";
 import { getMessages } from "../i18n";
 
 const locale = Astro.currentLocale ?? "en";
 const t = getMessages(locale);
 
 const frontend = [
-  { img: tsLogoImg, name: "TypeScript" },
-  { img: jsLogoImg, name: "JavaScript" },
-  { img: reactjsLogoImg, name: "ReactJS" },
-  { img: nextjsLogoImg, name: "NextJS" },
-  { img: tailwindcssLogoImg, name: "TailwindCSS" },
-  { img: zustandLogoImg, name: "Zustand" },
-  { img: zodLogoImg, name: "Zod" },
-  { img: shadcnuiLogoImg, name: "shadcn/ui" },
+  { icon: siTypescript, name: "TypeScript" },
+  { icon: siJavascript, name: "JavaScript" },
+  { icon: siReact, name: "ReactJS" },
+  { icon: siNextdotjs, name: "NextJS" },
+  { icon: siTailwindcss, name: "TailwindCSS" },
+  { icon: siZod, name: "Zod" },
+  { icon: siShadcnui, name: "shadcn/ui", useBrandColor: false },
 ];
 
 const backend = [
-  { img: nodejsLogoImg, name: "Node.js" },
-  { img: nestjsLogoImg, name: "NestJS" },
-  { img: laravelLogoImg, name: "Laravel" },
-  { img: postgresqlLogoImg, name: "PostgreSQL" },
-  { img: mysqlLogoImg, name: "MySQL" },
+  { icon: siNodedotjs, name: "Node.js" },
+  { icon: siNestjs, name: "NestJS" },
+  { icon: siLaravel, name: "Laravel" },
+  { icon: siPostgresql, name: "PostgreSQL" },
+  { icon: siMysql, name: "MySQL" },
 ];
 
 const others = [
-  { img: gitLogoImg, name: "Git" },
-  { img: linuxLogoImg, name: "Linux" },
-  { img: figmaLogoImg, name: "Figma" },
+  { icon: siDocker, name: "Docker" },
+  { icon: siKubernetes, name: "Kubernetes" },
+  { name: "AWS" },
+  { icon: siGit, name: "Git" },
+  { icon: siLinux, name: "Linux" },
+  { icon: siFigma, name: "Figma" },
 ];
 ---
 
 <div class="flex flex-col gap-6">
   <ToolsGroup title={t.tools.frontend} tools={frontend} />
   <ToolsGroup title={t.tools.backend} tools={backend} />
-    <ToolsGroup title={t.tools.others} tools={others} />
+  <ToolsGroup title={t.tools.others} tools={others} />
 </div>
